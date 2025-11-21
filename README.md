@@ -1,8 +1,8 @@
-# FluGenie-methodbox
-*FluGenie: Accurate sequence-based antigenicity prediction and antigenic variant detection for influenza viruses.*
+# FluNexus-methodbox
+*FluNexus: Accurate sequence-based antigenicity prediction and antigenic variant detection for influenza viruses.*
 
-FluGenie enables accurate sequence-based antigenicity prediction and antigenic variant detection for influenza viruses.
-![FluGenie](figure/methodbox.jpg) 
+FluNexus enables accurate sequence-based antigenicity prediction and antigenic variant detection for influenza viruses.
+![FluNexus](figure/methodbox.jpg) 
 
 ---
 
@@ -27,8 +27,8 @@ These methods are implemented to allow **easy testing** with your own influenza 
 Clone this repository:
 
 ```bash
-git clone https://github.com/xingyili/FluGenie-methodbox.git
-cd FluGenie-methodbox
+git clone https://github.com/xingyili/FluNexus-methodbox.git
+cd FluNexus-methodbox
 ```
 
 Install the required core dependencies (preferably in a virtual environment):
