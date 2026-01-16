@@ -9,7 +9,7 @@ FluNexus enables accurate sequence-based antigenicity prediction and antigenic v
 ## Introduction
 
 Accurate sequence-based models have the potential to enable extensive antigenic surveillance of circulating viral isolates while reducing the need for extensive experimental efforts. 
-This repository provides **open-source implementations** of six sequence-based methods for predicting antigenicity:
+This repository provides **open-source implementations** of ten sequence-based methods for predicting antigenicity:
 
 - **PREDAC** [1]
 - **CNN-PSO** [2]
@@ -17,6 +17,10 @@ This repository provides **open-source implementations** of six sequence-based m
 - **MFPAD** [4]
 - **PREDAC-CNN** [5]
 - **AdaBoost** [6]
+- **IAV-CNN** [7]
+- **PN-AgEvaH1** [8]
+- **PREDAC-Transformer** [9]
+- **FluAttn** [10]
 
 These methods are implemented to allow **easy testing** with your own influenza HA1 sequence data.
 
@@ -46,7 +50,7 @@ Install the required core dependencies (preferably in a virtual environment):
 
 ## **Demo: Running Each Method**
 
-Below are example commands for running the six methods. Replace the example input files with your own HA1 sequence file (`--seq_path`) and corresponding antigenicity/HI data (`--anti_path`) as needed.
+Below are example commands for running the ten methods. Replace the example input files with your own HA1 sequence file (`--seq_path`) and corresponding antigenicity/HI data (`--anti_path`) as needed.
 
 ### **1. PREDAC**
 
@@ -84,6 +88,31 @@ python src/PREDAC-CNN/main.py --seq_path demo_data/demo_HA1.csv --anti_path demo
 python src/AdaBoost/main.py --seq_path demo_data/demo_HA1.csv --anti_path demo_data/demo_HI.csv --subtype H3 --label NAD_distance
 ```
 
+### **7. IAV-CNN**
+
+```bash
+python src/IAV-CNN/main.py --seq_path demo_data/demo_HA1.csv --anti_path demo_data/demo_HI.csv --subtype H3 --label NAD_class
+```
+
+### **8. PN-AgEvaH1**
+
+```bash
+python src/PN-AgEvaH1/main.py --seq_path demo_data/demo_HA1.csv --anti_path demo_data/demo_HI.csv --subtype H3 --label NAD_class
+```
+
+### **9. PREDAC-Transformer**
+
+```bash
+python src/PREDAC-Transformer/main.py --seq_path demo_data/demo_HA1.csv --anti_path demo_data/demo_HI.csv --subtype H3 --label NAD_class
+```
+
+### **10. FluAttn**
+
+```bash
+python src/FluAttn/main.py --seq_path demo_data/demo_HA1.csv --anti_path demo_data/demo_HI.csv --subtype H3 --label NAD_distance
+```
+
+
 ## **Output**
 
 All methods will generate prediction results based on the trained models
@@ -101,3 +130,11 @@ All methods will generate prediction results based on the trained models
 [5] Meng J, Liu J, Song W, et al. PREDAC-CNN: predicting antigenic clusters of seasonal influenza A viruses with convolutional neural network[J]. Briefings in Bioinformatics, 2024, 25(2): bbae033.
 
 [6] Shah S A W, Palomar D P, Barr I, et al. Seasonal antigenic prediction of influenza A H3N2 using machine learning[J]. Nature Communications, 2024, 15(1): 3833.
+
+[7] Yin R, Thwin N N, Zhuang P, et al. IAV-CNN: a 2D convolutional neural network model to predict antigenic variants of influenza A virus[J]. IEEE/ACM Transactions on Computational Biology and Bioinformatics, 2021, 19(6): 3497-3506.
+
+[8] An Y, Ding X, Tian Y, et al. High-throughput pseudovirus neutralisation maps the antigenic landscape of influenza A/H1N1 viruses[J]. EBioMedicine, 2025, 122.
+
+[9] Liu J, Wang J, Wang C, et al. Deciphering the Antigenic Evolution of Seasonal Influenza A Viruses with PREDAC-Transformer: From Antigenic Clustering to Key Site Identification[J]. bioRxiv, 2025: 2025.10. 29.684974.
+
+[10] Geng L, He J, Liu P. FluAttn: Antigenicity prediction of influenza A/H3N2 through attention-based feature mining[J]. Infectious Disease Modelling, 2025.
